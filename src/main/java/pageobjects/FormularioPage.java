@@ -19,7 +19,6 @@ public class FormularioPage {
         firstNameInput.sendKeys(name);
     }
 
-    @Deprecated
     public void lastNameInput(String lastName) throws InterruptedException {
         WebElement firstNameInput = driver.findElement(INPUTLASTNAME);
         firstNameInput.sendKeys(lastName);
@@ -34,5 +33,4 @@ public class FormularioPage {
     public FormularioPage(WebDriver driver) {
         this.driver = driver;
     }
-
 }
