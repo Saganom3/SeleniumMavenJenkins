@@ -3,9 +3,6 @@ package pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.concurrent.TimeUnit;
 
 public class FormularioPage {
     private WebDriver driver;
@@ -14,17 +11,17 @@ public class FormularioPage {
     private By INPUTLASTNAME = By.id("last-name");
     private By RDBLEVELEDUCATION = By.id("radio-button-1");
 
-    public void firstNameInput(String name) throws InterruptedException {
+    public void firstNameInput(String name) {
         WebElement firstNameInput = driver.findElement(INPUTFIRSTNAME);
         firstNameInput.sendKeys(name);
     }
 
-    public void lastNameInput(String lastName) throws InterruptedException {
+    public void lastNameInput(String lastName) {
         WebElement firstNameInput = driver.findElement(INPUTLASTNAME);
         firstNameInput.sendKeys(lastName);
     }
 
-    public void rbnLevelEducation() throws InterruptedException {
+    public void rbnLevelEducation() {
         WebElement levelEducation = driver.findElement(RDBLEVELEDUCATION);
         levelEducation.click();
     }
